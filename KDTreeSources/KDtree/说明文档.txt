@@ -1,0 +1,12 @@
+==================本工程用于knn算法中的kd树的搜索分类==========
+主要调用类为MinerKNN.java
+输入数据：csv文件，train文件第一列为label，其余列为特征；test文件为特征文件；（数据类型均为整数型）
+输出数据：test数据对应的label，并写入到filepath文件中
+
+使用过程：
+ 		File train = new File("data/train.csv");
+		File test = new File("data/test.csv");
+		String filepath = "data/result.csv";
+		MinerKNN knn = new MinerKNN(train, test, filepath);
+		knn.KDTreeAlgo();//使用kd树进行分类
+		knn.KNNAlgo();//不使用kd树
